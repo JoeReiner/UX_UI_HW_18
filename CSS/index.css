@@ -4,6 +4,9 @@
     list-style: none;
     text-decoration: none;
 }
+body{
+    background-color: whitesmoke;
+}
 
 header{
     background-color: #2b81f1;
@@ -56,15 +59,14 @@ nav{
     font-size: 28px;
     font-weight: 600;
     padding: auto;
-    margin: auto;
-    background-color: whitesmoke;
+    margin: 0px 10%;
 }
 
 <!--  My UX Skills section coded using CSS flex --
 
 .mySkills{
     display: flex;
-    width: 33%;
+    width: 50%;
     margin: auto;
     padding: auto;
     align-items: left;
@@ -75,19 +77,32 @@ nav{
 
 .flexContainer{
         display: flex;
-        margin:auto;
-        padding:auto;
-        width:33%;
-        flex-direction: column;
-        align-items: left;
         }
+
+.workGrid{
+    display: grid;
+    grid-template-columns: 25% 75%;
+    gap: 20px;
+}
 
 .myWork{
     font-family: 'Montserrat';
     font-size: 16px;
-    background-color: whitesmoke;
+    width: 50%;
 
+}
 
+#bottomHalf{
+    margin: 0px 10%;
+}
+
+.aboutMeContainer{
+    width: 50%;
+}
+
+.portrait{
+    width: 100%;
+    height: auto;
 }
     
 
@@ -147,7 +162,22 @@ footer span{
 }
 
 
-@media(max-width: 600px){
+@media only screen and (max-width: 600px) {
+.flexContainer{
+   flex-direction:column;
+}
+.workGrid{
+    grid-template-columns: 100%;
+}
+.aboutMeContainer{
+    width: 100%;
+}
 
-    
+.myWork{
+    width: 100%;
+}
+.mySkills{
+    width:100%;
+}
+
 }
